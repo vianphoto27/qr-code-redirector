@@ -4,20 +4,29 @@
   <meta charset="utf-8">
   <title>Redirecting…</title>
 
-  <!-- Immediate redirect -->
-  <meta http-equiv="refresh" content="0; url=https://sites.google.com/view/vianphotographynwa/home">
-
-  <!-- SEO: canonical should be the destination -->
-  <link rel="canonical" href="https://sites.google.com/view/vianphotographynwa/home">
-
-  <!-- Optional favicon -->
+  <!-- Favicon -->
   <link rel="icon" href="/favicon.ico">
+
+  <!-- Canonical (SEO hint) -->
+  <link id="canonicalLink" rel="canonical">
+
+  <script>
+    // 🔁 Single source of truth
+    const REDIRECT_URL = "https://sites.google.com/view/vianphotographynwa/home";
+
+    // Set canonical URL
+    document.getElementById("canonicalLink").href = REDIRECT_URL;
+
+    // Redirect without creating back-button history
+    window.location.replace(REDIRECT_URL);
+  </script>
 </head>
 <body>
-  <p>
+  <noscript>
     This page has moved.
-    If you are not redirected automatically,
-    <a href="https://sites.google.com/view/vianphotographynwa/home">click here</a>.
-  </p>
+    <a href="https://sites.google.com/view/vianphotographynwa/home">
+      Click here to continue
+    </a>.
+  </noscript>
 </body>
 </html>
