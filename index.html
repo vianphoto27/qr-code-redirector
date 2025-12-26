@@ -9,8 +9,17 @@
 
   <!-- Canonical (SEO hint) -->
   <link id="canonicalLink" rel="canonical">
-
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T8GMHRE5GS"></script>
   <script>
+    // Google Tag
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T8GMHRE5GS');
+
+    // Actual Code starts from here
     // 🔁 Single source of truth
     const REDIRECT_URL = "https://sites.google.com/view/vianphotographynwa/home";
 
@@ -19,7 +28,7 @@
 
     // Redirect without creating back-button history
     window.location.replace(REDIRECT_URL);
-  </script>
+  </script>  
 </head>
 <body>
   <noscript>
